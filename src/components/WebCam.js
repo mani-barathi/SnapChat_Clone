@@ -42,9 +42,9 @@ function WebCam() {
                 storage.ref('snaps').child(id).getDownloadURL()
                     .then(url => {
                         db.collection('snaps').add({
-                            displayName: 'mani',
+                            displayName: 'bhuvi',
                             imageURL: url,
-                            photoURL: 'https://avatars2.githubusercontent.com/u/49336839?s=460&u=fbbc21b3ee2066b82cf7ddf1205524757ac5f3f4&v=4',
+                            photoURL: 'https://avatars0.githubusercontent.com/u/58076602?s=460&u=223d0e34ea276310861bd45c361020b101aea906&v=4',
                             timestamp: firebase.firestore.FieldValue.serverTimestamp()
                         })
                         console.log('Uploaded a data_url string!');

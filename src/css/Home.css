@@ -6,9 +6,9 @@
 }
 
 .home__header{
-    padding:  1rem;
-    padding-bottom: 2rem;
-    border-radius: 5px;
+    padding:  0.5rem 1rem;
+    padding-bottom: 1.5rem;
+    border-radius: 10px;
     background-color: #FFFC00;
     display: flex;
     justify-content: space-between;
@@ -35,6 +35,13 @@
 }
 .home__headerInput::placeholder{
     color: grey;
+}
+
+.home__headerPlusBtn{
+    user-select: none;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: bold;
 }
 
 .home__body{
