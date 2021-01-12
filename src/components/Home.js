@@ -42,8 +42,11 @@ function SnapList() {
                     snaps.map(snap =>
                         <Snap key={snap.id} data={snap.data} />
                     )
-
                 }
+
+                <div className="home__bodyBottomSpace">
+
+                </div>
 
                 <button onClick={goToWebCam} className="home__bodyCameraBtn"
                     title="Click to take a Snap" ></button>

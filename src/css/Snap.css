@@ -1,6 +1,6 @@
 .snap{
     padding: 0.5rem 1rem;
-    border-bottom: 1px solid whitesmoke;
+    border-top: 1px solid whitesmoke;
     cursor: pointer;
     display: flex;
     align-items: center;
