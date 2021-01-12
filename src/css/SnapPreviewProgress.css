@@ -1,0 +1,28 @@
+.snappreviewProgress{
+    height: 0.2rem;
+    width: 100%;
+    max-width: 300px;
+    background-color: black;
+}
+
+.snappreviewProgress__inner{
+    height: 100%;
+    background-color: whitesmoke;
+    width: 0;
+    animation : progress-animation 10s linear infinite ;
+}
+
+@keyframes progress-animation{
+  from{  
+      width:0%; 
+    }
+  to{ 
+      width:100%; 
+    }
+}
+
+@media screen and (max-width:450px){
+  .snappreviewProgress{
+    max-width: 290px;
+}  
+}

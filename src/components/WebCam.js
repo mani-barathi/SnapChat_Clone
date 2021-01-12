@@ -9,6 +9,7 @@ import { useStateValue } from '../context_reducers/StateProvider'
 
 function WebCam() {
     const history = useHistory()
+    // eslint-disable-next-line
     const [{ user }, dispatch] = useStateValue()
     const [image, setImage] = useState(null)
     const webCamRef = useRef(null)

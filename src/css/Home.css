@@ -31,6 +31,7 @@
     border: none;
     outline: none;
     padding: 0.3rem 1rem;
+    margin-top: 0.5rem;
     font-size: 1rem;
     flex:1;
 }
@@ -49,9 +50,7 @@
     flex: 1;
     background-color:white;
     margin-top: -1rem;
-    border-radius: 5px;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+    border-radius: 10px;
     border-top-right-radius: 0px;
     overflow-y: scroll;
 }
@@ -79,7 +78,7 @@
 }
 
 .home__bodyBottomSpace{
-    height: 3rem;
+    height: 4rem;
 }
 
 .home__bodyCameraBtn{

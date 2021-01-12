@@ -1,5 +1,5 @@
 export const initialState = {
-    user: 'mani',
+    user: null,
     previewSnapURL: null
 }
 

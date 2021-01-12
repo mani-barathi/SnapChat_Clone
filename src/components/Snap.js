@@ -1,10 +1,12 @@
 import React from 'react'
 import "../css/Snap.css"
+import TimeAgo from 'react-timeago'
 import { useHistory } from "react-router-dom"
 import { useStateValue } from "../context_reducers/StateProvider"
 
 function Snap({ data }) {
     const history = useHistory()
+    // eslint-disable-next-line
     const [state, dispatch] = useStateValue()
 
     const showSnapPreview = () => {
@@ -17,13 +19,13 @@ function Snap({ data }) {
 
     return (
         <div className="snap">
-            <img src={data.photoURL}
+            <img src={`https://ui-avatars.com/api/?font-size=0.33&name=${data.displayName}`}
                 alt=""
                 className="snap__avatar" />
             <div className="snap__info" onClick={showSnapPreview}>
                 <h4 className="snap__infoDisplayName">{data.displayName}</h4>
                 <span className="snap__infoViewText">Tap to View -</span>
-                <span className="snap_infoTimestamp">{new Date(data.timestamp?.toDate()).toUTCString()}</span>
+                <span className="snap_infoTimestamp"> <TimeAgo date={data.timestamp?.toDate().toString().substring(0, 21)} /> </span>
             </div>
         </div>
     )

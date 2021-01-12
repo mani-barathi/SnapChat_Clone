@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import "../css/SnapPreview.css"
+import SnapPreviewProgress from "./SnapPreviewProgress"
 import { useHistory } from "react-router-dom"
 import { useStateValue } from "../context_reducers/StateProvider"
 
@@ -25,6 +26,7 @@ function SnapPreview() {
         <div className="snappreview">
             {previewSnapURL &&
                 <>
+                    <SnapPreviewProgress closePreview={closePreview} />
                     <img src={previewSnapURL} alt="" className="snappreview__image" />
                     <button onClick={closePreview} className="snappreview__closeBtn">&#10006;</button>
                 </>
