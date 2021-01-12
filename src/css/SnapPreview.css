@@ -1,0 +1,30 @@
+.snappreview{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.snappreview__closeBtn{
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0.3rem;
+    color: white;
+    font-size: xx-large;
+    border: none;
+}
+
+.snappreview__image{
+    object-fit: contain;
+    max-height: 500px;
+}
+
+@media screen and (max-width:450px){
+    .snappreview__image{
+        border-radius: 5px;
+    }
+}

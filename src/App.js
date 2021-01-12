@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 
 import WebCam from "./components/WebCam";
 import Home from "./components/Home";
+import SnapPreview from './components/SnapPreview';
 
 function App() {
 
@@ -14,6 +15,10 @@ function App() {
 
             <Route path='/webcam'>
               <WebCam />
+            </Route>
+
+            <Route path="/preview" >
+              <SnapPreview />
             </Route>
 
             <Route exact path="/" >

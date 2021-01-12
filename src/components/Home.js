@@ -45,7 +45,8 @@ function SnapList() {
 
                 }
 
-                <button onClick={goToWebCam} className="home__bodyCameraBtn"></button>
+                <button onClick={goToWebCam} className="home__bodyCameraBtn"
+                    title="Click to take a Snap" ></button>
             </div>
         </div>
     )

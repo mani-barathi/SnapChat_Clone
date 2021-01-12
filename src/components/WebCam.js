@@ -5,11 +5,14 @@ import { useHistory } from "react-router-dom"
 
 import firebase from "firebase"
 import { db, storage } from "../firebase"
+import { useStateValue } from '../context_reducers/StateProvider'
 
 function WebCam() {
     const history = useHistory()
+    const [{ user }, dispatch] = useStateValue()
     const [image, setImage] = useState(null)
     const webCamRef = useRef(null)
+
     const videoConstraints = {
         width: 300,
         height: 500,
@@ -42,7 +45,7 @@ function WebCam() {
                 storage.ref('snaps').child(id).getDownloadURL()
                     .then(url => {
                         db.collection('snaps').add({
-                            displayName: 'bhuvi',
+                            displayName: user,
                             imageURL: url,
                             photoURL: 'https://avatars0.githubusercontent.com/u/58076602?s=460&u=223d0e34ea276310861bd45c361020b101aea906&v=4',
                             timestamp: firebase.firestore.FieldValue.serverTimestamp()
