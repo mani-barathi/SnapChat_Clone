@@ -1,5 +1,8 @@
 # SnapChat Clone
-A Snapchat clone inspired from Sunny Sangha's Youtube video. 
+A Snapchat clone inspired from Sunny Sangha's Youtube [video](https://www.youtube.com/watch?v=1kGISk5ft2w). I Changed the Style to my own liking and also made the website responsive.
+
+#### Click [Here](https://snapchat-clone-ffea1.web.app/) to see the live Demo 
+#### Also give a ⭐ if you like the Project
 
 ### Features 
 * Upload Snaps directly by Taking photo from Camera
