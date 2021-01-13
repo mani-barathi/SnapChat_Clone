@@ -19,7 +19,7 @@ function Snap({ data }) {
 
     return (
         <div className="snap">
-            <img src={`https://ui-avatars.com/api/?font-size=0.33&name=${data.displayName}`}
+            <img src={data.photoURL}
                 alt=""
                 className="snap__avatar" />
             <div className="snap__info" onClick={showSnapPreview}>

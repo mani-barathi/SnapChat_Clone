@@ -46,12 +46,12 @@ function WebCam() {
                 storage.ref('snaps').child(id).getDownloadURL()
                     .then(url => {
                         db.collection('snaps').add({
-                            displayName: user,
+                            displayName: user.displayName,
                             imageURL: url,
-                            photoURL: 'https://avatars0.githubusercontent.com/u/58076602?s=460&u=223d0e34ea276310861bd45c361020b101aea906&v=4',
+                            photoURL: user.photoURL,
                             timestamp: firebase.firestore.FieldValue.serverTimestamp()
                         })
-                        console.log('Uploaded a data_url string!');
+                        console.log('Uploaded a Snap!!');
                     })
             }
         )

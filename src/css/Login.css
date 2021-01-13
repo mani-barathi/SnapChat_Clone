@@ -37,6 +37,7 @@
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 2px;
+    border-bottom: 2px solid #FFFC00;
 }
 
 .login__formButton:hover{

@@ -3,7 +3,7 @@ import "../css/Home.css"
 import { useHistory } from "react-router-dom"
 import { useStateValue } from "../context_reducers/StateProvider"
 import Snap from "./Snap"
-import { db } from "../firebase"
+import { db, auth } from "../firebase"
 
 function SnapList() {
     const history = useHistory()
@@ -35,17 +35,19 @@ function SnapList() {
     }
 
     const logoutUser = () => {
-        dispatch({
-            type: 'SET_USER',
-            user: null
-        })
+        auth.signOut()
+            .then(() => {
+                console.log('User Logged Out')
+                dispatch({ type: "SET_USER", user: null })
+            })
+            .catch(error => alert(error.message))
     }
 
     return (
         <div className="home">
             <div className="home__header">
                 <img alt="" className="home__headerAvatar" title="Click to Logout"
-                    src="https://avatars2.githubusercontent.com/u/49336839?s=460&u=fbbc21b3ee2066b82cf7ddf1205524757ac5f3f4&v=4"
+                    src={user.photoURL}
                     onClick={logoutUser} />
                 <input type="text" className="home__headerInput" placeholder="Friends..." />
                 <span className="home__headerPlusBtn">+</span>
@@ -57,9 +59,7 @@ function SnapList() {
                     )
                 }
 
-                <div className="home__bodyBottomSpace">
-
-                </div>
+                <div className="home__bodyBottomSpace"></div>
 
                 <button onClick={goToWebCam} className="home__bodyCameraBtn"
                     title="Click to take a Snap" ></button>

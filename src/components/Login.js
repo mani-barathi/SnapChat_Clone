@@ -1,24 +1,15 @@
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
 import "../css/Login.css"
-import { useStateValue } from "../context_reducers/StateProvider"
+import { provider, auth } from "../firebase"
 function Login() {
-    const inputRef = useRef(null)
-    // eslint-disable-next-line
-    const [state, dispatch] = useStateValue()
-
-    useEffect(() => {
-        inputRef.current.focus()
-    }, [])
 
     const handleLogin = (event) => {
-        event.preventDefault()
-        const name = inputRef.current.value
-        if (name) {
-            dispatch({
-                'type': 'SET_USER',
-                user: name
+        auth.signInWithPopup(provider)
+            .then(result => console.log(`${result.user.displayName} Logged In!`))
+            .catch(error => {
+                console.log('Login Error: ', error)
+                alert(error.message)
             })
-        }
     }
 
     return (
@@ -26,16 +17,11 @@ function Login() {
             <h1 className="login__title">
                 SnapChat Clone
             </h1>
-            <form className="login__form">
-                <input type="text" placeholder="Enter your name"
-                    ref={inputRef}
-                    className="login__formInput" />
-                <center>
-                    <button className="login__formButton" type="submit"
-                        onClick={handleLogin} >Sign In
-                    </button>
-                </center>
-            </form>
+            <center>
+                <button className="login__formButton" type="submit"
+                    onClick={handleLogin} >Sign In
+                </button>
+            </center>
         </div>
     )
 }
