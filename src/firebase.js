@@ -1,12 +1,13 @@
 import firebase from "firebase"
 
+// Replace Project Keys here...
 const firebaseConfig = {
-    apiKey: "AIzaSyByVek7Xer_luE2RcHDbMs6vPWqIM9WcvI",
-    authDomain: "snapchat-clone-ffea1.firebaseapp.com",
-    projectId: "snapchat-clone-ffea1",
-    storageBucket: "snapchat-clone-ffea1.appspot.com",
-    messagingSenderId: "511908134741",
-    appId: "1:511908134741:web:147f83c3857223784479dc"
+    apiKey: "",
+    authDomain: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: "",
+    appId: ""
 };
 
 const firebaseApp = firebase.initializeApp(firebaseConfig)
