@@ -5,9 +5,8 @@ import { useStateValue } from "../context_reducers/StateProvider"
 import Snap from "./Snap"
 import { db, auth } from "../firebase"
 
-function SnapList() {
+function Home() {
     const history = useHistory()
-    // eslint-disable-next-line
     const [{ user }, dispatch] = useStateValue()
     const [snaps, setSnaps] = useState([])
 
@@ -68,4 +67,4 @@ function SnapList() {
     )
 }
 
-export default SnapList
+export default Home
