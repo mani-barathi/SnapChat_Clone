@@ -17,6 +17,9 @@ A Snapchat clone inspired from Sunny Sangha's Youtube [video](https://www.youtub
     * **Authentication** - Google Authentication
     * **Storage** - Cloud Storage for uploading and saving Images
 
+### Preview
+<img src="./public/preview.gif" />
+
 ### To run this on Local machine
 * Clone the repo, install all the dependcies from package.json
 * Create a firebase project and replace all the Project keys in 'src/firebase.js'
