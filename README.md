@@ -18,17 +18,6 @@ A Snapchat clone inspired from Sunny Sangha's Youtube video. I Changed the Desig
     * **Authentication** - Google Authentication
     * **Storage** - Cloud Storage for uploading and saving Images
 
-### Preview
-<img src="./public/preview.gif" />
-
-### Components 
-  * **App** - Main component which Hold all the other Components, this is where all the Routing has been done
-  * **Login** - Login Page where user can login with their Google Account
-  * **Home** - Home Page where User can view all Snaps. (**Route - '/'**)
-  * **Snap** - This is the Reactangular Snap which is listed in the Home Componenet
-  * **WebCam** - Webcam Page where Logged in User can capture photo and Upload. (**Route - '/webcam'**)
-  * **SnapPreview** - This is the Preview of snap when User clicks the Snaps listed in the Home Component. (**Route - '/preview'**)
-  * **SnapPreviewProgress** - This is the small Time Indication Bar present at the top of SnapPreview Component.
 #### Component Tree
 <img src="./public/tree.JPG" />
 
